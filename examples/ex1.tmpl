@@ -1,0 +1,23 @@
+The title is: [title]
+The author is: [foo.author]
+
+[- This is a comment -]
+
+This simple reference ('titlex') is not defined >>[titlex]<<
+Either is this structured one (foox.author) >>[foox.author]<<
+or this one (foo.authorx) >>[foo.authorx]<< . undefined references result in empty strings.
+
+Here is a list:
+    [for item in list]<li><a href="[item.href]">[item.text]</a></li>
+    [/for]</ul>
+
+Now test ifdef and ifndef:
+[ifdef error][include ex1a][/ifdef]
+[ifndef error]There is no 'error' in the data.[/ifndef]
+
+Now try the if/else combo
+[ifdef error][include ex1a][else]There is no 'error' in the data.[/ifndef]
+
+
+OK, that's all for now.
+
