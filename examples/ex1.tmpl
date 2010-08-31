@@ -1,5 +1,6 @@
 The title is: [title]
 The author is: [foo.author]
+The author.x.y is: [foo.author.x.y]
 
 [- This is a comment -]
 
@@ -11,15 +12,35 @@ Here is a list:
     [for item in list]<li><a href="[item.href]">[item.text]</a></li>
     [/for]</ul>
 
-Now test ifdef and ifndef:
-[ifdef error][include ex1a][/ifdef]
-[ifndef error]There is no 'error' in the data.[/ifndef]
+Now test ifdef:
 
-Now try the if/else combo
-[ifdef error][include ex1a][else]There is no 'error' in the data.[/ifndef]
+[ifdef error][include ex1a][else]There is no 'error' in the data.[/ifdef]
 
 Now try to format something in json:
 [foo json]
+
+glorp
+
+[ifdef foo.author]
+Looks like we have foo.author
+[else]
+No foo.author found.
+[/ifdef]
+
+
+[ifdef foo]
+foo
+[ifdef foo.author]
+[foo.author]
+[else]
+no author
+[/ifdef]
+[else]
+no foo
+[/ifdef]
+
+For debug, here is the data:
+[* json]
 
 OK, that's all for now.
 
