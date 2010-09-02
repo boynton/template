@@ -14,7 +14,8 @@ Here is a list:
 
 Now test ifdef:
 
-[ifdef error][include ex1a][else]There is no 'error' in the data.[/ifdef]
+[define err_msg]This is an error message defined in the calling template[/define]
+[ifdef error][include ex1a.tmpl][else]There is no 'error' in the data.[/ifdef]
 
 Now try to format something in json:
 [foo json]
