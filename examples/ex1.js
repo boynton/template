@@ -17,5 +17,8 @@ function cleanString(s) {
     return s.replace(/\n/g, '\\n').replace(/'/g, "\\'");
 }
 
+//var tmp = template.fromFile('ex1.tmpl', ['.','..'], true);
+//var tmp = template.fromFile('ex1.tmpl', ['.','..']);
 var tmp = template.fromFile('ex1.tmpl');
+console.log("tmp = " + tmp);
 console.log(tmp(dat));
